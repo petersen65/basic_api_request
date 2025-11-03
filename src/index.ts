@@ -1,8 +1,9 @@
-console.log("Hello from TypeScript!");
+import OpenAI from "openai";
+const client = new OpenAI();
 
-async function main() {
-  console.log("Node.js version:", process.version);
-  console.log("Current directory:", process.cwd());
-}
+const response = await client.responses.create({
+    model: "gpt-5",
+    input: "Write a one-sentence bedtime story about a unicorn."
+});
 
-main().catch(console.error);
+console.log(response.output_text);

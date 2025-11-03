@@ -17,5 +17,8 @@
     "@types/node": "latest",
     "tsx": "latest",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "openai": "^6.7.0"
   }
 }
